@@ -1,0 +1,341 @@
+/*--------------------------------------------------- Configurações Gerais-------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&family=Open+Sans:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --color1: #6b63fff1;
+    --color2: #F1DBB4;
+    --color3: #0c0ce94d;
+    --color4: rgba(192, 204, 212, 0.363);
+}
+
+body {
+    background-color: rgba(192, 204, 212, 0.363);
+}
+
+/*-----------------------------------------------------Inicio das configuração da barra------------------------------------------*/
+header {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+#head-top {
+    background-color: white;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 50px;
+
+}
+
+.icon {
+    margin: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#top {
+    padding-left: 25px;
+    display: flex;
+
+}
+
+#logo {
+    display: block;
+    max-width: 175px;
+    margin: 10px 40px;
+
+}
+
+#pesquisa {
+    height: 30px;
+    margin: 10px;
+    min-width: 45%;
+    padding: 10px;
+    font-size: 0.95em;
+
+
+}
+
+.btn {
+    background-color: #fff;
+}
+
+#btn-seach {
+    margin-top: 5px;
+    height: 40px;
+}
+
+#btn-seach:hover {
+
+    background-color: rgba(0, 0, 0, 0.274);
+}
+
+.icon {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/*-------------------------------------------------Fim das configuração da barra-------------------------------------------------*/
+
+
+
+/*-----------------------------------------------Inicio das configuração de Conteudo---------------------------------------------*/
+
+#main {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+#colun1 {
+    margin: 0 25px;
+}
+
+#colun2 {
+    margin: 0 25px;
+}
+
+#colun3 {
+    margin: 0 25px;
+}
+
+.conteudo {
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.head-conten {
+    padding: 10px;
+    border-bottom: 3px solid var(--color4);
+}
+
+.data {
+    font-size: 0.85em;
+    color: rgba(0, 0, 0, 0.651);
+}
+
+.titulo {
+    text-align: left;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.788);
+    font-size: 1.3em;
+}
+
+.main-conten img {
+    width: 100%;
+}
+
+.footer-conten {
+    padding: 5px;
+    padding-left: 10px;
+    color: rgba(0, 0, 0, 0.767);
+
+}
+
+/*---------------------------------------------------Fim das configuração de conteudo-------------------------------------------*/
+
+
+
+/*---------------------------------------------------------- Style janela modal--------------------------------------------------*/
+
+.janela {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.589);
+    z-index: 999;
+}
+
+.janela.abrir {
+    display: flex;
+}
+
+.jan-modal {
+    width: 900px;
+    height: 450px;
+    background-color: #ffffffb2;
+    backdrop-filter: blur(10px);
+    padding: 50px 30px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.fechar {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background-color: red;
+    font-size: 1.2em;
+    padding: 5px 15px;
+    color: white;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes abrirmodal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir .modal {
+    animation: abrirmodal 0.5s;
+}
+
+/*---------------------------------------------------Estilizando o formulario----------------------------------------------------*/
+
+.post-topc {
+    font-weight: 500;
+    padding: 10px 0px;
+}
+
+.post-title {
+    font-size: 1em;
+    padding: 5px;
+
+}
+
+.description {
+    padding: 10px;
+    font-size: .9em;
+}
+
+.modal h1 {
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+
+#faixa {
+    width: 35px;
+    float: left;
+    background-color: #FF0065;
+    height: 450px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.submit-post {
+    cursor: pointer;
+    display: block;
+    padding: 5px 70px;
+    margin: 20px auto 0px auto;
+    background-color: #FF0065;
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+
+}
+
+.submit-post:hover {
+    background-color: rgba(0, 0, 0, 0.705);
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #ffffff10;
+
+}
+
+/* ------------------------------------------------------Fim Style janela modal--------------------------------------------------*/
+
+
+/* --------------------------------------------------- Inicio Responsividade Mobile  --------------------------------------------*/
+
+@media screen and (max-width: 1320px) {
+    #main {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #head-top {
+        height: 50px;
+        margin: 0 10px 0 0;
+        width: 85%;
+    }
+
+    #main {
+        flex-direction: column;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #seach-desk {
+        display: none;
+    }
+
+    #user {
+        display: none;
+    }
+
+    .jan-modal {
+        min-width: 250px;
+    }
+
+    .janela-modal {
+        width: 400px;
+    }
+
+    .description {
+        width: 300px;
+
+    }
+
+    #faixa {
+        display: none;
+    }
+
+    .fechar {
+        right: 0px;
+
+    }
+
+    .navbar.navbar-expand-xxl {
+        padding: 8px 0px;
+    }
+
+    .nav-item {
+        padding-left: 10px;
+    }
+
+    .btn-small .navbar-toggler-icon {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    #btn-seach {
+        display: none;
+    }
+
+    #pesquisa {
+        margin-right: 0;
+    }
+}
+
+/*  ------------------------------------------------------Fim Responsividade Mobile --------------------------------------------*/
